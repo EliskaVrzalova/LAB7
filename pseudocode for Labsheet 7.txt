@@ -1,0 +1,624 @@
+//eliska vrzalova
+//date: 16/10/2023
+//estimated time 15 min
+//actual time 10 min
+//Q1 labsheet7
+
+//variables
+numberValue = 0;
+
+//input
+display message"Enter a number:";
+input numberValue;
+
+//checking the number entered
+if(numberValue < 0)
+	display message"The number was less than zero"; //if value bellow zero is entered
+
+else if(numberValue==0)
+	display message"The number was equal to 0"; // if 0 is entered
+
+else (numberValue > 0)
+	display message"The number was grater than zero"; //if value above 0 is entered
+end else if
+
+//test data
+Test 1: user enters 0, output should be: "The number was equal to zero."
+Test 2: user enters -1, output should be: "The number was less than zero."
+Test 3: user enters -10, output should be: "The number was less than zero."
+Test 4: user enters 1, output should be: "The number was greater than zero."
+Test 5: user enters 8, output should be: "The number was greater than zero."
+------------------------------------------------------------------------------------------------------
+
+//eliska vrzalova
+//date: 16/10/2023
+//estimated time 15 min
+//actual time 10 min
+//Q2 labsheet7
+
+//variables
+incomeValue = 0;
+LOW_INCOME = 30 000;
+MIDDLE_HIGH_INCOME = 70 000;
+
+//input
+display message"What is your income?";
+
+//checking the income
+if(incomeValue >= 0 and incomeValue < LOW_INCOME) //Range of low income
+	display message"low income";
+	
+else if(incomeValue >= LOW_INCOME and incomeValue < MIDDLE_HIGH_INCOME) //Range of middle income
+	display message"middle income";
+	
+else if (incomeValue >= MIDDLE_HIGH_INCOME) //Range of high income
+	display message"high income";
+	
+else
+	display message"Error - you cannot enter negative numbers"; //error message if negative number is entered
+end else if
+
+//test data
+Test 1: user enters 0, output should be: "Low income."
+Test 2: user enters 15 000, output should be: "Low income."
+Test 3: user enters 30 000, output should be: "Middle income."
+Test 4: user enters 63 000, output should be: "Middle income."
+Test 5: user enters 70 000, output should be: "High income."
+Test 6: user enters 100 000, output should be: "High income."
+Test 7: user enters -1, output should be: "Error - you cannot enter negative numbers."
+-------------------------------------------------------------------------------------------------------------
+//eliska vrzalova
+//date: 16/10/2023
+//estimated time 15 min
+//actual time 10 min
+//Q3 labsheet7
+
+//variables
+examMark= 0;
+FAIL = 40; 
+PASS = 55;
+MERIT = 70;
+DISTINCTION = 100;
+
+//input
+display message"What is your exam mark?";
+input examMark;
+
+//checking the grade
+if(examMark >= 0 and examMark < FAIL)
+	display message"Student has failed."; //range of fail 0 - 39
+else if(examMark >= FAIL and examMark <PASS) //range of pass 40 - 54
+	display message"Student has passed.";
+else if(examMark >= PASS and examMark < MERIT) //range of merit 55-69
+	display message"Student has a merit.";
+else if(examMark >= MERIT and examMark <=DISTINCTION) //range of distinction 70-100
+	display message"Student has distinction.";
+else
+	display message"Error- exam mark has an incorrect value."; //number entered is out of 0-100 range
+end else if
+
+//test data
+//Test 1: User inputs 2, output should be: "Student has failed."
+//Test 2: User inputs 40, output should be: "Student has passed."
+//Test 3: User inputs 47, output should be: "Student has passed."
+//Test 4: User inputs 55, output should be: "Student has a merit."
+//Test 5: User inputs 60, output should be: "Student has a merit."
+//Test 6: User inputs 70, output should be: "Student has distinction."
+//Test 7: User inputs 90, output should be: "Student has distinction."
+//Test 8: User inputs 100, output should be: "Student has distinction."
+//Test 9: User inputs 115, output should be: "Error - exam mark has an incorrect value.
+//Test 10: User inputs -1, output should be : "Error - exam mark has an incorrect value.
+--------------------------------------------------------------------------------------------------------------------
+//eliska vrzalova
+//date: 18/10/2023
+//estimated time 15 min
+//actual time 10 min
+//Q4 labsheet7
+
+//variables
+num1 = 0;
+num2 = 0;
+divisionResult = 0; 
+
+//input
+display message"Enter the first number:";
+input num1;
+display messsage"Enter the second number:";
+input num2;
+
+//calculation
+divisionResult = num1 % num2; //division
+
+//checking division possibility
+if(divisionResult == 0) //mod = 0 means it is exactly divisible
+	display message "Number" + num1 "is exactly divisible by number" + num2;
+else
+	display message "Number" + num1 "is not exactly divisible by number" + num2;
+
+//test data
+//Test 1: user enters 4 and 2, output should be: "Number 4 IS exactly divisible by number 2."
+//Test 2: user enters 24 and 8, output should be: "Number 24 IS exactly divisible by number 8."
+//Test 3: user enters 15 and 7, output should be: "Number 15 is NOT exactly divisible by number 7."
+//Test 4: user enters 20 and 3, output should be: "Number 20 is NOT exactly divisible by number 3."
+-------------------------------------------------------------------------------------------------------------------------------
+//eliska vrzalova
+//date: 18/10/2023
+//estimated time 10 min
+//actual time 7 min
+//Q5 labsheet7
+
+//variables
+fahrenheit = 0;
+celsius = 0;
+CONVERTION = 5/9;
+
+//ask user for input
+display message"What is the temperature in fahrenheit?";
+input fahrenheit;
+
+//convertion, formula = fahrenheit-32*5/9
+celsius = (fahrenheit - 32)*CONVERTION; //converts fahrenheit temperature to celsius temperature
+//answer
+display message"This fahrenheit temperature is" + celsius "celsius temperature.";
+
+//test data
+//Test 1: user enters 32, output should be: "This temperature is in celsius 0."
+//Test 2: user enters 100, output should be: "This temperature is in celsius 37.7778."
+//Test 3: user enters 5, output should be: "This temperature is in celsius -15."
+-----------------------------------------------------------------------------------------------------------------------------
+
+//eliska vrzalova
+//date: 18/10/2023
+//estimated time 10 min
+//actual time 7 min
+//Q5b labsheet7
+
+//variables
+num1 = 0;
+num2 = 0;
+num3 = 0;
+
+//input
+display message"Enter the first number:";
+input num1;
+display message"Enter the second number:";
+input num2;
+display message"Enter the third number:";
+input num3;
+
+//checking the lowest number
+if(num1 >=1 and num1 <=15 and num2 >=1 and num2 <=15 and num3 >=1 and num3 <=15) //range 1-15 for all numbers
+	if(num1 < num2 and num1 < num3) //first number is the lowest
+		display message"The lowest number is:" + num1;
+	else if(num2 < num1 and num2 < num3)//second number is the lowest
+		display message"The lowest number is:" + num2;
+	else if(num3 < num1 and num3 <num2) //third number is the lowest
+		display message"the lowest number is:" + num3;
+	end else if
+else
+	display message"Error - the number you have entered is out of range 1 -15.";
+end if
+
+//test data
+//Test 1: user enters 4 2 15, the output should be: "The lowest number is: 2"
+//Test 2: user enters 5 7 11, the output should be: "The lowest number is: 5"
+//Test 3: user enters 3 1 17, the output should be: "Error - The number you have enteret is out of range 1 - 15."
+---------------------------------------------------------------------------------------------------------------------------
+//eliska vrzalova
+//date: 23/10/2023
+//estimated time 10 min
+//actual time 4 min
+//Q6 labsheet7
+
+main()
+start function
+//variables
+centimeters = 0;
+
+//input
+Display message "What is the lenght in centimeters?";
+input centimeters;
+end function
+
+inchEquivalent()
+start function
+//calculations
+inches = 0;
+CONVERTION = 0.394; //local variable
+IF (centimeters <= 0)
+	Display message "Error- the number has an incorrect value";
+else
+	inches = centimeters * CONVERTION; //converts centimeters to inches
+	Display message "This lenght in inches is" + inches;
+End if
+end function
+
+//test data
+//Test 1: User inputs 15, output should be 5.91
+//Test 2: User inputs 40, output should be 15.76
+//Test 3: User inputs -1, output should be "Error- the number has an incorrect value."
+//Test 4: User inputs 0, output should be "Error- the number has an incorrect value."
+--------------------------------------------------------------------------------------------------------------
+//eliska vrzalova
+//date: 23/10/2023
+//estimated time 10 min
+//actual time 10 min
+//Q7 labsheet7
+
+main()
+start function
+//variables
+seconds = 0;
+minutes = 0;
+hours = 0;
+
+//input
+Display message "Enter the amount of seconds:";
+input seconds;
+Display message "Enter the amount of minutes:";
+input minutes;
+Display message "Enter the amount of hours:";
+input hours;
+end function
+
+secondsIn()
+start function
+//convertion to seconds
+MINUTES_TO_SECONDS = 60; //there are 60 seconds in 1 minute, local variable
+HOURS_TO_SECONDS = 3600; //there are 3600 seconds in 1 hour, local variable
+if (seconds < 0 or minutes <0 or hours <0)
+	display message "Error: The number has an incorrect value.";
+else
+	seconds = seconds + (minutes * MINUTES_TO_SECONDS) + (hours * HOURS_TO_SECONDS); //converts all inputs to seconds and adds them
+	Display message "The total time in seconds is:" + seconds;
+
+End if
+end function
+
+//test data
+//Test 1: User inputs: -1, 30; 4, output should be: "Error: The number has an incorrect value."
+//Test 2: User inputs: 120, -1; 4, output should be: "Error: The number has an incorrect value."
+//Test 3: User inputs: 120, 30; -1, output should be: "Error: The number has an incorrect value."
+//Test 4: User inputs: 120, 30; 4, output should be: "The total time in seconds is: 16320"
+//Test 5: User inputs: 0, 30; 4, output should be: "The total time in seconds is: 16200"
+-------------------------------------------------------------------------------------------------------------
+//eliska vrzalova
+//date: 23/10/2023
+//estimated time 10 min
+//actual time 15 min
+//Q8 labsheet7
+
+main()
+start function
+//variables
+lenght = 0;
+width = 0;
+
+//input
+display message "Enter the lenght in meters:";
+input lenght;
+display message "Enter the width in meters:";
+input width;
+calAreaRectangle (lenght, width); //function call
+end function
+
+calAreaRectangle (lenght,width)
+start function
+area = 0;
+if (lenght <0 or width<0)
+	display message"Error: input cannot be lass than zero";
+else
+	area = lenght*width; //calculates the area of rectangle
+	display mnessage "The area of rectangle is" + area;
+end if
+end function
+
+//test data
+//test 1: user inputs 10, 5, output should be: "The area of rectangle is: 50."
+//test 2: user inputs -1, 5, output should be: "Error: input cannot be bellow zero."
+//test 3: user inputs 10, -1, output should be: "Error: input cannot be bellow zero."
+---------------------------------------------------------------------------------------------------------------------------
+//eliska vrzalova
+//date: 23/10/2023
+//estimated time 10 min
+//actual time 15 min
+//Q9 labsheet7
+
+main()
+start function
+//variables
+lenght = 0;
+width = 0;
+
+//input
+display message "Enter the lenght in meters:";
+input lenght;
+display message "Enter the width in meters:";
+input width;
+
+calPerimeterRectangle (lenght, width); //function call
+end function
+
+calPerimeterRectangle (lenght,width)
+start function
+perimeter = 0;
+if (lenght <0 or width<0)
+	display message"Error: input cannot be lass than zero";
+else
+	perimeter = 2*(lenght+width); //calculates the area of rectangle
+	display mnessage "The perimeter of rectangle is" + perimeter;
+end if
+end function
+
+//test data
+//test 1: user inputs 2, 4, output should be: "The perimeter of rectangle is: 12"
+//test 1: user inputs 10, 25, output should be: "The perimeter of rectangle is: 70"
+//test 1: user inputs 0, 4, output should be: "Error cannot enter number less or equal to 0"
+//test 1: user inputs 2, 0, output should be: "Error cannot enter number less or equal to 0"
+----------------------------------------------------------------------------------------------------------
+//eliska vrzalova
+//date: 25/10/2023
+//estimated time 15 min
+//actual time 15 min
+//Q10 labsheet7
+
+main()
+start function
+
+//variables
+euros = 0;
+//input
+display message"Enter the amount in euro:";
+input euros;
+
+calculateEuroNotes(euros); //function call
+end function
+
+calculateEuroNotes(euros)
+start function
+
+//variables
+numNotes10= 0;
+numNotes1 = 0;
+NOTES_10 = 10;
+
+
+if(euros<= 0)
+	display message"Error: cannot enter number less or equal to 0";
+else
+	numNotes10 = euros/NOTES_10; //calculates the number of 10 euro notes
+	euros = (euros - numNotes10* NOTES_10);
+	numNotes1 = euros; //calculates the number of 1 euro notes
+	display message "You have" + numNotes10 + " 10 euro notes and" + numNotes1 + " 1 euro notes.";
+end if
+end function
+
+//test data
+//test 1: user inputs 34, output should be: "You have 3 10 euro notes and 4 1 euro notes"
+//test 2: user inputs 50, output should be: "You have 5 10 euro notes and 0 1 euro notes"
+//test 3: user inputs 0, output should be: "Error: number less or equal to 0 cannot be entered"
+//test 4: user inputs -1, output should be: "Error: number less or equal to 0 cannot be entered"
+--------------------------------------------------------------------------------------------------------------------
+//eliska vrzalova
+//date: 25/10/2023
+//estimated time 15 min
+//actual time 20 min
+//Q11 labsheet7
+
+main()
+start function
+ //variables
+num1 = 0;
+num2 = 0;
+num3 =0;
+//input
+display message"Enter first number:";
+input num1;
+display message"Enter second number:";
+input num2;
+display message"Enter third number:";
+input num3;
+
+if(num1 >= 4 and num1 <= 16 and num2 >= 4 and num2 <= 16 and num3 >= 4 and num3 <= 16)
+	sortNumbers(num1, num2, num3); //function call
+else
+	display message: "Error: number is outside of the range 4-16";
+end if
+end function
+
+sortNumbers (t_num1, t_num2, t_num3)
+start function
+
+// if the first number was the lowest
+
+if(t_num1 < t_num2 and t_num1 < t_num3) //num1 is lowest
+	display message "The lowest number is:" + t_num1;
+	if(t_num2 < t_num3) //num2 is the middle
+	display message:"The middle number is:" + t_num2;
+	display message:"The highest number is:" + t_num3;
+	else //num3 is the middle
+	display message:"The middle number is:" + t_num3;
+	display message:"The highest number is:" + t_num2;
+	end if
+
+
+
+
+// if the second number was the lowest
+
+else if(t_num2 < t_num1 and t_num2 < t_num3) //num2 is lowest
+	display message "The lowest number is:" + t_num1;
+	if(t_num1 < t_num3) //num1 is the middle
+	display message:"The middle number is:" + t_num1;
+	display message:"The highest number is:" + t_num3;
+	else //num3 is the middle
+	display message:"The middle number is:" + t_num3;
+	display message:"The highest number is:" + t_num1;
+	end if
+
+
+// if the third number was the lowest
+
+else if(t_num3 < t_num1 and t_num3 < t_num2) //num3 is lowest
+	display message "The lowest number is:" + t_num1;
+	if(t_num1 < t_num2) //num1 is the middle
+	display message:"The middle number is:" + t_num1;
+	display message:"The highest number is:" + t_num2;
+	else //num2 is the middle
+	display message:"The middle number is:" + t_num2;
+	display message:"The highest number is:" + t_num1;
+	end if
+end else if
+
+end function
+
+//test data
+//test 1: user enters 5 3 9, output should be: "the lowest number is: 3, the middle number is: 5 and the highest number is: 9"
+//test 2: user enters 1 3 9, output should be: "Error- number is outside the range 4-16"
+//test 3: user enters 1 3 20, output should be: "Error- number is outside the range 4-16"
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+//eliska vrzalova
+//date: 01/11/2023
+//estimated time 15 min
+//actual time 20 min
+//Q12 labsheet7
+
+main()
+start function
+
+//variables
+creditCard =0;
+SUM = 500;
+
+//input
+display message"Enter the amount of their credit card bill.";
+input creditCard;
+
+if(creditCard<SUM)
+	display message"Number less than 500 cannot be entered.";
+else
+	Interest(creditCard, SUM);//function call
+end if
+
+end function
+
+Interest(creditCard, SUM)
+start function
+//local variables
+FIRST_INTEREST = 0.12;
+REMAINING_INTEREST=0.18;
+firstInterest= 0;
+remainningInterest= 0;
+totalInterest=0;
+
+firstInterest=SUM*FIRST_INTEREST;  //first 500 euro charge
+creditCard= creditCard-SUM
+
+If (creditCard>SUM)
+	remainingInterest= (creditCard-SUM)*REMAINING_INTEREST;
+end if
+totalInterest=firstInterest+remainingInterest;
+
+end function
+
+//test data
+//test 1: User enters 1226, output should be: "Total interest due:190,68 euro"
+//test 2: User enters 3657, output should be: "Total interest due:628.26 euro" 
+//test 3: User enters 750, output should be: "Total interest due:60 euro"
+//test 4: User enters 360, output should be: "Error: number bellow 500 cannot be entered."
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+//eliska vrzalova
+//date: 02/11/2023
+//estimated time 15 min
+//actual time 20 min
+//Q13 labsheet7
+
+//variables
+num1= 0;
+num2= 0;
+num3= 0;
+result1=0;
+result2=0;
+
+//input
+display message" Enter the first number.";
+input num1;
+display message" Enter the second number.";
+input num2;
+display message" Enter the third number.";
+input num3;
+
+result1= num1 % num2;
+result2= num1 % num3;
+
+if(result1 == 0 && result 2 == 0)
+	display message" The first number is exactly divisible by both second and third number.";
+else if(result1 == 0 || result2 == 0)
+	display message"The first number is exactly divisible by one of the 2 numbers.";
+	if(result1 == 0)
+		display message"The number is exactly divisible by the number" + num2;
+	else
+		display message"The number is exactly divisible by the number" + num3;
+	end if
+else
+	display message"The first number is not exactly divisible by any of the numbers.";
+end else if
+
+//test data
+//test 1: user enters: 20 5 4, output should be:" The first number is exactly divisible by both numbers."
+//test 2: user enters: 20 5 3, output should be: "the first number is exactly divisible by one of the 2 numbers." and "The first number is exactly divisible by the number 5"
+//test 3: user enters: 20 7 3, output should be: "The first number is not exactly divisible by any of the numbers."
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//eliska vrzalova
+//date: 06/11/2023
+//estimated time 20 min
+//actual time 20 min
+//Q14 labsheet7
+
+//variables
+premium = 0;
+claims = 0;
+BASIC_INCREASE = 0.05;
+NO_CLAIMS_DISCOUNT = 0.4;
+EXTRA_CHARGE = 0.2; //for every claim they made
+
+//input
+display message "What is the value of the last year's premium?";
+input premium
+display message "What is the number of claims you made that year?";
+input claims;
+
+premium = premium + (premium*BASIC_INCREASE); //current premium is 5% higher
+
+if(claims == 0)
+	premium = premium - (premium*BASIC_INCREASE* NO_CLAIMS_DISCOUNT); //if no claims, discount 40% from the 5% increase
+	display message" Your new insurance premium is" + premium;
+else
+	premium = premium + (BASIC_INCREASE *(claims*EXTRA_CHARGE)); //there is 20% charge for every claim made
+	display message" Your new insurance premium is" + premium;
+end if
+
+//error checking
+while (premium <= 0)
+	display message "Please enter a valid value.";
+	input premium;
+end while
+
+while (claims <= 0)
+	display message "Please enter a valid value.";
+	input claims;
+end while
+
+
+
+
+
+
+
+	
